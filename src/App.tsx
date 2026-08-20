@@ -3,6 +3,9 @@ import { Button } from './components/ui/Button';
 import { useState } from 'react';
 import type { DesignTokens } from './types/tokens';
 import { ColorsPanel } from './components/ui/ColorsPanel';
+import { TypographyPanel } from './components/ui/TypographyPanel';
+import { SpacingPanel } from './components/ui/SpacingPanel';
+import { RadiusPanel } from './components/ui/RadiusPanel';
 
 function App() {
   const [tokens, setTokens] = useState<DesignTokens>({
@@ -10,17 +13,32 @@ function App() {
     radius: '10px',
     spacingMd: '12px 24px',
     fontSizeMd: '16px',
-    fontFamily: 'sans-serif', // <- estava 'sans-sarif'
+    fontFamily: 'sans-serif', 
   });
-  return (
-    <div className="p-10 font-sans">
-      <h1 className="text-2xl font-bold mb-4"> Meu Design System</h1> {/* <- estava 'text-2x1' */}
+   return (
+  <div className="h-screen flex flex-col">
+    <header className="h-16 border-b flex items-center px-6">
+      <span className="font-bold text-lg">Meu primeiro Design System</span>
+    </header>
 
-      <ColorsPanel tokens={tokens} onChange={setTokens} />
+    <div className="flex-1 grid grid-cols-[280px_1fr_320px] gap-6 p-6 overflow-hidden">
+      <section className="flex flex-col gap-6 overflow-auto">
+        <ColorsPanel tokens={tokens} onChange={setTokens} />
+        <TypographyPanel tokens={tokens} onChange={setTokens} />
+        <SpacingPanel tokens={tokens} onChange={setTokens} />
+        <RadiusPanel tokens={tokens} onChange={setTokens} />
+      </section>
 
-      <Button label="Button" tokens={tokens} />
+      <section className="flex-1 flex items-center justify-center overflow-auto p-6 border rounded-xl">
+        <Button label="Button" tokens={tokens} />
+      </section>
+
+      <section className="border rounded-xl p-6 overflow-auto">
+        <h1 className="font-semibold text-sm uppercase text-gray-500">Código</h1>
+      </section>
     </div>
-  );
+  </div>
+);
 }
 
 export default App;
