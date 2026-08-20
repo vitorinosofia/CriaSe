@@ -6,6 +6,8 @@ import { ColorsPanel } from './components/ui/ColorsPanel';
 import { TypographyPanel } from './components/ui/TypographyPanel';
 import { SpacingPanel } from './components/ui/SpacingPanel';
 import { RadiusPanel } from './components/ui/RadiusPanel';
+import { GeneratedCodePanel } from './components/ui/GeneratedCodePanel';
+import { TokenUsedList } from './components/ui/TokensUsedList';
 
 function App() {
   const [tokens, setTokens] = useState<DesignTokens>({
@@ -29,12 +31,17 @@ function App() {
         <RadiusPanel tokens={tokens} onChange={setTokens} />
       </section>
 
-      <section className="flex-1 flex items-center justify-center overflow-auto p-6 border rounded-xl">
+      <section className="flex-1 flex items-center justify-center overflow-auto p-6 border rounded-xl gap-6">
+        <div className="flex flex-col gap-4 items-center">
         <Button label="Button" tokens={tokens} />
+        <Button label="Button" tokens={tokens} variant="secondary" />
+        </div>
+        <TokenUsedList tokens={tokens} />
       </section>
 
       <section className="border rounded-xl p-6 overflow-auto">
-        <h1 className="font-semibold text-sm uppercase text-gray-500">Código</h1>
+        
+        <GeneratedCodePanel tokens={tokens} />
       </section>
     </div>
   </div>
