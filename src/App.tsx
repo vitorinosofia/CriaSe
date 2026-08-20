@@ -2,7 +2,6 @@ import './App.css';
 import { Button } from './components/ui/Button';
 import { useState } from 'react';
 import type { DesignTokens } from './types/tokens';
-import { ColorInput } from './components/ui/ColorInput';
 import { ColorsPanel } from './components/ui/ColorsPanel';
 
 function App() {
@@ -11,11 +10,11 @@ function App() {
     radius: '10px',
     spacingMd: '12px 24px',
     fontSizeMd: '16px',
-    fontFamily: 'sans-sarif',
+    fontFamily: 'sans-serif', // <- estava 'sans-sarif'
   });
   return (
     <div className="p-10 font-sans">
-      <h1 className="text-2x1 font-bold mb-4"> Meu Design System</h1>
+      <h1 className="text-2xl font-bold mb-4"> Meu Design System</h1> {/* <- estava 'text-2x1' */}
 
       <ColorsPanel tokens={tokens} onChange={setTokens} />
 
@@ -25,3 +24,4 @@ function App() {
 }
 
 export default App;
+
