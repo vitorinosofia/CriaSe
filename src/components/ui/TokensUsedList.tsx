@@ -4,7 +4,7 @@ interface TokensUsedListProps {
     tokens: DesignTokens;
 }
 
-export function TokenUsedList({tokens}: TokensUsedListProps) {
+export function TokensUsedList({tokens}: TokensUsedListProps) {
 const tokenEntries = Object.entries(tokens);
 return(
    <ul>
