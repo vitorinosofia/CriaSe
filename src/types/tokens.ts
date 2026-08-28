@@ -4,4 +4,5 @@ export type DesignTokens = {
   spacingMd: string;
   fontSizeMd: string;
   fontFamily: string;
+  shadow: string;
 };

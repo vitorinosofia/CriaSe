@@ -31,6 +31,7 @@ border: `1px solid ${tokens.colorPrimary}`
         padding: tokens.spacingMd,
         fontSize: tokens.fontSizeMd,
         fontFamily: tokens.fontFamily,
+        boxShadow: tokens.shadow,
      
       }}
     >

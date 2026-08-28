@@ -15,7 +15,7 @@ export function SelectInput({ id, label, value, options, onChange }: SelectInput
 
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-sm font-medium text-gray-700">
+      <label htmlFor={id} className="text-sm font-medium text-black">
         {label}
       </label>
       <select

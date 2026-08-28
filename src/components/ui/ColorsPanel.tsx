@@ -13,7 +13,6 @@ export function ColorsPanel({ tokens, onChange }: ColorsPanelProps) {
 
   return (
     <section className="flex flex-col gap-3">
-      <h2 className="text-sm font-semibold uppercase text-gray-500">Cores</h2>
       <ColorInput
         id="color-primary"
         label="Cor primária"

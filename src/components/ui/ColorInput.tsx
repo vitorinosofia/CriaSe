@@ -14,7 +14,7 @@ export function ColorInput({ id, label, value, onChange }: ColorInputProps) {
 
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-sm font-medium text-gray-700">
+      <label htmlFor={id} className="text-sm font-medium text-black">
         {label}
       </label>
       <div className="flex items-center gap-2">

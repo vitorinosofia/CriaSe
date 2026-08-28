@@ -16,8 +16,8 @@ export function SpacingPanel({ tokens, onChange }: SpacingPanelProps) {
   }
  
   return(
-    <section className="flex flex-col gap-3">
-        <h2 className="text-sm font-semibold uppercase text-gray-500"> Espaçamento </h2>
+    <section className="flex flex-col gap-8">
+      
         <SelectInput
         id="Spacing"
         label="Tamanho do espaçamento"

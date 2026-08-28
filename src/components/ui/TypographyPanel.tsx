@@ -19,7 +19,7 @@ export function TypographyPanel({ tokens, onChange }: TypographyPanelProps) {
   }
   return(
     <section className="flex flex-col gap-3">
-        <h2 className="text-sm font-smibold uppercase text=gray-500"> Tipografia </h2>
+        
         <SelectInput
         id="font-size-md"
         label="Tamanho da fonte"
