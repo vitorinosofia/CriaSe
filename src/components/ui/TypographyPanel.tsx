@@ -1,5 +1,5 @@
 import type { DesignTokens } from "../../types/tokens";
-import { SelectInput } from "./SelectInput";
+import { ButtonGroupInput } from "./ButtonGroupInput";
 
 interface TypographyPanelProps {
     tokens: DesignTokens;
@@ -20,15 +20,15 @@ export function TypographyPanel({ tokens, onChange }: TypographyPanelProps) {
   return(
     <section className="flex flex-col gap-3">
         
-        <SelectInput
-        id="font-size-md"
+        <ButtonGroupInput
+
         label="Tamanho da fonte"
         value={tokens.fontSizeMd}
         options={FONT_SIZE_OPTIONS}
         onChange={handleFontSizeChange}
 />
-  <SelectInput
-        id="font-family"
+  <ButtonGroupInput
+      
         label="Família da fonte"
         value={tokens.fontFamily}
         options={FONT_FAMILY_OPTIONS}

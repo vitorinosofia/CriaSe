@@ -32,6 +32,9 @@ border: `1px solid ${tokens.colorPrimary}`
         fontSize: tokens.fontSizeMd,
         fontFamily: tokens.fontFamily,
         boxShadow: tokens.shadow,
+        borderWidth: tokens.borderWidth,
+        borderColor: tokens.borderColor,
+        borderStyle: "solid",
      
       }}
     >

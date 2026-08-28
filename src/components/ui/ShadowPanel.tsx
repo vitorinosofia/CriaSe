@@ -1,5 +1,5 @@
 import type { DesignTokens } from "../../types/tokens";
-import { SelectInput } from "./SelectInput";
+import { ButtonGroupInput } from "./ButtonGroupInput";
 
 interface ShadowsPanelProps {
   tokens: DesignTokens;
@@ -49,17 +49,17 @@ export function ShadowsPanel({ tokens, onChange }: ShadowsPanelProps) {
   }
 
   return (
-    <section className="flex flex-col gap-3">
-      <h2 className="text-sm font-semibold uppercase text-gray-500">Sombras</h2>
-      <SelectInput
-        id="shadow-direction"
+    <section className="flex flex-col gap-6 margin-4">
+      
+      <ButtonGroupInput
+       
         label="Direção"
         value={currentDirectionLabel}
         options={Object.keys(DIRECTION_OPTIONS)}
         onChange={handleDirectionChange}
       />
-      <SelectInput
-        id="shadow-intensity"
+      <ButtonGroupInput
+       
         label="Intensidade"
         value={currentIntensityLabel}
         options={Object.keys(INTENSITY_OPTIONS)}

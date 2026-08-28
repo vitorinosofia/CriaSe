@@ -1,5 +1,5 @@
 import type { DesignTokens } from "../../types/tokens";
-import { SelectInput } from "./SelectInput";
+import { ButtonGroupInput } from "./ButtonGroupInput";
 
 interface RadiusPanelProps {
     tokens: DesignTokens;
@@ -16,8 +16,8 @@ export function RadiusPanel({ tokens, onChange }: RadiusPanelProps) {
 
     return(
       <section className="flex flex-col gap-3">
-          <SelectInput
-          id="Radius"
+         <ButtonGroupInput
+        
           label="Tamanho do raio"
           value={tokens.radius}
           options={RADIUS_OPTIONS}

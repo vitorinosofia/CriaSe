@@ -5,4 +5,6 @@ export type DesignTokens = {
   fontSizeMd: string;
   fontFamily: string;
   shadow: string;
+  borderColor: string;
+  borderWidth: string;
 };

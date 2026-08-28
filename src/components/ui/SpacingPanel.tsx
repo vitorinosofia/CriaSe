@@ -1,5 +1,5 @@
 import type { DesignTokens } from "../../types/tokens";
-import { SelectInput } from "./SelectInput";
+import { ButtonGroupInput } from "./ButtonGroupInput";
 
 interface SpacingPanelProps {
     tokens: DesignTokens;
@@ -18,8 +18,8 @@ export function SpacingPanel({ tokens, onChange }: SpacingPanelProps) {
   return(
     <section className="flex flex-col gap-8">
       
-        <SelectInput
-        id="Spacing"
+       <ButtonGroupInput
+       
         label="Tamanho do espaçamento"
         value={tokens.spacingMd}
         options={SPACING_SIZE_OPTIONS}
